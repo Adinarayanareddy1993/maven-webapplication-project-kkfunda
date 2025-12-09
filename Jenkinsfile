@@ -2,7 +2,8 @@ node
 {
     //   /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-3.9.6
    def mavenHome=tool name: "maven-3.9.6"
-  
+echo "git branch Name: ${env.BRANCH_NAME}"
+echo "build number: ${env.BUILD_NUMBER}"
 
    try
    {  
