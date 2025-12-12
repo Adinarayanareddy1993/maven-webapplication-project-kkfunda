@@ -2,7 +2,7 @@
 //dev jenkins pipeline
 pipeline
 {
-	
+    
    agent any
    tools
    {
@@ -68,4 +68,10 @@ pipeline
            }
 
    }  //stages ending
+
+   } //pipeline ending
+
+
+
+
 
