@@ -57,6 +57,13 @@ pipeline
         """           
            }
         }
+
+        stage('pipeline-qa') {
+            steps {
+               build job: 'pipeline-qa' //  This is downstream
+            }
+        }
+
    }  // stage ending
 
 }  // pipeline ending
