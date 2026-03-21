@@ -20,6 +20,8 @@ jobs:
         run: |
           WAR=$(ls target/*.war | head -n 1)
           echo "WAR file: $WAR"
+          echo "URL: $TOMCAT_URL"
+
           curl -v -u "${TOMCAT_USER}:${TOMCAT_PASS}" \
           --upload-file "$WAR" \
           "${TOMCAT_URL}/manager/text/deploy?path=/maven-web-application&update=true"
