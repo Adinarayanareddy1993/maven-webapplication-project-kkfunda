@@ -15,7 +15,7 @@ jobs:
           java-version: 17
           cache: maven
 
-      - run: mvn -b clean package
+      - run: mvn  clean package
 
       - name: deploy War to Tomcat
         env:
