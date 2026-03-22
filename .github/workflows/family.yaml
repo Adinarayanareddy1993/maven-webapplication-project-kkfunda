@@ -25,8 +25,8 @@ jobs:
 
         run: | 
           WAR=$(ls target/*.war | head -n 1)
-          echo: "war file $WAR"
-          echo: "url $TOMCAT_URL"
+          echo "war file $WAR"
+          echo "url $TOMCAT_URL"
         
           curl -v -u "$TOMCAT_USER:$TOMCAT_PASS" \
           --upload-file "$WAR" \
