@@ -30,4 +30,4 @@ jobs:
         
           curl -v -u "$TOMCAT_USER:$TOMCAT_PASS" \
           --upload-file "$WAR" \
-          "$TOMCAT_URL/manager/text/deploy?path=maven-web-application&update=true"
+          "$TOMCAT_URL/manager/text/deploy?path=/maven-web-application&update=true"
