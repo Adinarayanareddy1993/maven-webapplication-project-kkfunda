@@ -24,4 +24,11 @@ jobs:
 
       - name: Build with maven
         run: mvn clean package
+
+  sonarqube:
+    runs-on: self-hosted
+
+    steps:
+      - name: deploy in to sonar-code quality
+        run: mvn sonar:sonar
   
