@@ -1,0 +1,27 @@
+name: CICD Pipeline 2
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: set up JDK 17
+        uses: actions/setup_java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: install the maven
+        run: |
+          sudo apt update
+          sudo apt install maven -y
+
+      - name: Build with maven
+        run: mvn clean package
+  
