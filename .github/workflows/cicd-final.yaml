@@ -60,5 +60,10 @@ jobs:
       - name: Run Docker Container
         run: |
           docker run -d -p 8080:8080 --name my-container ${{ secrets.Docker_Repository }}:${{ github.sha }}
+
+      - name: Push images to Docker Hub
+        run: |
+          docker push ${{ secrets.Docker_Repository }}:${{ github.sha }}
+        # docker push ${{ secrets.Docker_Repository }}:latest     
           
           
